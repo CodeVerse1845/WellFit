@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Page</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Body Mass Index (BMI) Calculator</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Calculate Your BMI</h2>
+            <form id="bmi-form">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" required>
+                
+                <label for="height">Height (m):</label>
+                <input type="number" id="height" step="0.01" required>
+                
+                <button type="submit">Calculate BMI</button>
+            </form>
+            <div id="bmi-result"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 WellFit. All rights reserved.</p>
+    </footer>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

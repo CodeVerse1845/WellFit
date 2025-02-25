@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <p>Your journey to wellness begins now</p>
+            <img src="assets/black-and-white-gym-room.jpg" alt="">
+        </div>
+    </header>
+    <main>
+        <div class="container1">
+            <div class="box box1" onclick="openLoginPopup()">
+                <a href="/HTML Files/workout.html">
+                    <img src="assets/WORKOUTS.png" alt="">
+                </a>
+            </div>
+            <div class="box box2" onclick="openLoginPopup()">
+                <a href="/Diet-Recipes/Diet-Recipes.html">
+                    <img src="assets/DIET RECEIPES.png" alt="">
+                </a>
+            </div>
+            <div class="box box3" onclick="openLoginPopup()">
+                <a href="/HTML Files/articles.html">
+                    <img src="assets/articles1.png" alt="">
+                </a>
+            </div>
+            <div class="box box4" onclick="openLoginPopup()">
+                <a href="/HTML Files/bmi.html">
+                    <img src="assets/BMI.png" alt="">
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="main-footer">
+            <!-- Footer content -->
+        </div>
+    </footer>
+
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLoginPopup()">&times;</span>
+            <h2>Login</h2>
+            <form action="/HTML_Files/login.html" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

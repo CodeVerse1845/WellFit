@@ -1,0 +1,22 @@
+{
+  "name": "login-popup-project",
+  "version": "1.0.0",
+  "description": "A project that implements a login popup when a user clicks on a box in the home page.",
+  "main": "src/js/scripts.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'"
+  },
+  "keywords": [
+    "login",
+    "popup",
+    "wellness",
+    "fitness"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellFit</title>
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/home.css">
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/notification.css">
+    <script src="/javascript/notification.js" defer></script>
+    <!-- <script src="/javascript/toggle.js" defer></script> -->
+
+</head>
+
+<body>
+
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <span>Notification</span>
+            <button class="close-btn" onclick="closeNotification()">&times;</button>
+        </div>
+        <div class="notification-content" id="notificationMessage"></div>
+    </div>
+
+    <div id="loading-overlay">
+        <div class="loading">
+            <span>W</span>
+            <span>E</span>
+            <span>L</span>
+            <span>L</span>
+            <span>F</span>
+            <span>I</span>
+            <span>T</span>
+        </div>
+    </div>
+
+    <div id="content">
+        <header>
+            <div id="header"></div>
+        </header>
+
+        <div class="image1">
+            <div class="heading">
+                <p class="main-tagline">YOUR JOURNEY TO WELLNESS BEGINS</p>
+            </div>
+            <img src="/assets/gym-equipment-empty-room.jpg" loading="lazy" alt="Gym Room">
+        </div>
+
+        <main>
+            <div class="container1">
+                <div class="box box1">
+                    <a href="/HTML_Files/workout.html">
+                        <img src="/assets/WORKOUTS.png" loading="lazy" alt="Workouts">
+                    </a>
+                </div>
+                <div class="box box2">
+                    <a href="/Diet-Recipes/Diet-Recipes.html">
+                        <img src="/assets/DIET RECEIPES.png" loading="lazy" alt="Diet Recipes">
+                    </a>
+                </div>
+                <div class="box box3">
+                    <a href="/HTML_Files/articles.html">
+                        <img src="/assets/articles1.png" loading="lazy" alt="Articles">
+                    </a>
+                </div>
+                <div class="box box4">
+                    <a href="/HTML_Files/tools.html">
+                        <img src="/assets/tools.jpg" loading="lazy" alt="Tools">
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer"></div>
+    </div>
+
+    <script src="/javascript/chatbot.js"></script>
+    <script src="/javascript/loading.js"></script>
+
+</body>
+
+</html>

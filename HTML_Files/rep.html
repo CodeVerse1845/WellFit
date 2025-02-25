@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1RM Calculator Tools-WellFit</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/CSS/rep.css">
+  <link rel="stylesheet" href="/CSS/header.css">
+  <link rel="stylesheet" href="/CSS/footer.css">
+  <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+  <script src="/javascript/template.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <div id="header"></div>
+  </header>
+  <div class="big-container">
+    <div class="container1">
+      <div class="calculator">
+        <div class="header1">
+          <i data-lucide="dumbbell" class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="dumbbell" class="lucide lucide-dumbbell icon">
+              <path d="M14.4 14.4 9.6 9.6"></path>
+              <path
+                d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z">
+              </path>
+              <path d="m21.5 21.5-1.4-1.4"></path>
+              <path d="M3.9 3.9 2.5 2.5"></path>
+              <path
+                d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z">
+              </path>
+            </svg>
+          </i>
+          <h1>1RM Calculator</h1>
+        </div>
+
+        <div class="form">
+          <div class="form-group">
+            <label>Exercise Type</label>
+            <select id="exerciseType" class="input">
+              <option value="bench">Bench Press</option>
+              <option value="squat">Squat</option>
+              <option value="deadlift">Deadlift</option>
+              <option value="overhead">Overhead Press</option>
+              <option value="row">Barbell Row</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Weight (lbs/kg)</label>
+            <input type="number" id="weight" class="input" placeholder="Enter weight">
+          </div>
+
+          <div class="form-group">
+            <label>Repetitions</label>
+            <input type="number" id="reps" class="input" placeholder="Enter reps">
+          </div>
+
+          <div class="buttons">
+            <button id="calculateBtn" class="btn calculate">
+              <i data-lucide="calculator" class="btn-icon"></i>
+              Calculate
+            </button>
+            <button id="resetBtn" class="btn reset">Reset</button>
+          </div>
+
+          <div id="result" class="result hidden">
+            <h2>Your One Rep Max:</h2>
+            <div class="result-value">
+              <span id="oneRM">0</span>
+              <span class="unit">lbs/kg</span>
+            </div>
+            <div class="exercise-note"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="backbtn-container">
+    <a href="/HTML_Files/tools.html">
+      <div class="bckbtn">Back to tools</div>
+    </a>
+  </div>
+
+  <footer>
+    <div id="footer"></div>
+  </footer>
+
+  <script type="module" src="/javascript/rep.js"></script>
+</body>
+
+</html>

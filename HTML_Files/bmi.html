@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/bmi.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <script src="/javascript/template.js" defer></script>
+    <title>BMI Calculator -WellFit</title>
+</head>
+
+<body>
+    <header>
+       <div id="header"></div>
+    </header>
+
+    <div class="main">
+
+        <div class="title">
+            <h1>BMI Calculator</h1>
+        </div>
+
+        <div class="container2">
+
+
+
+            <div class="calculator-container">
+
+                <div class="input-container">
+                    <div class="inputs">
+                        <label style="color: #f7f7f7;" for="height">Height (cm):</label>
+                        <input type="text" id="height" oninput="validateNumberInput(this)">
+                    </div>
+                    <div class="inputs">
+                        <label style="color: #f7f7f7;" for="weight">Weight (kg):</label>
+                        <input type="text" id="weight" oninput="validateNumberInput(this)">
+                    </div>
+                </div>
+
+                <button id="resetButton">Reset</button>
+                <button id="calculateBMI">Calculate</button>
+            </div>
+
+            <div class="result-container">
+                <p id="bmiResult">0.0</p>
+                <p id="rangeResult">Please enter your height and weight.
+                <h4 id="range"> </h4>
+                </p>
+            </div>
+
+            <div class="range-container">
+                <div class="range underweight">
+                    <h5>Underweight</h5>
+                    <small>Below 18.5</small>
+                </div>
+                <div class="range healthy">
+                    <h5>Healthy</h5>
+                    <small>18.5 - 24.9</small>
+                </div>
+                <div class="range overweight">
+                    <h5>Overweight</h5>
+                    <small>25 - 29.9</small>
+                </div>
+                <div class="range obese">
+                    <h5>Obese</h5>
+                    <small>30 and Above</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="backbtn-container">
+        <a href="/HTML_Files/tools.html">
+            <div class="bckbtn">Back to tools</div>
+        </a>
+    </div>
+    <footer>
+        <div id="footer"></div>
+    </footer>
+</body>
+<script src="/javascript/bmi.js"></script>
+<script src="/javascript/chatbot.js"></script>
+
+</html>

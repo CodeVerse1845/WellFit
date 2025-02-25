@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .notification-panel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: translateX(100%);
+            opacity: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .notification-panel.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .notification-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #eee;
+        }
+        .notification-content {
+            padding: 15px;
+        }
+        .close-btn {
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <span>Notification</span>
+            <button class="close-btn" onclick="closeNotification()">&times;</button>
+        </div>
+        <div class="notification-content" id="notificationMessage"></div>
+    </div>
+    
+    <h1>Welcome to my App!</h1>
+    <p>This is the main page.</p>
+    
+    <script>
+        const notifications = [
+            { type: "workout", message: "Time for your daily workout! 💪" },
+            { type: "water", message: "Remember to drink water! 💧" },
+            { type: "motivation", message: "You got this! Keep pushing forward! 🌟" },
+            { type: "workout", message: "Let's get moving! Exercise time! 🏼" },
+            { type: "water", message: "Stay hydrated! Take a water break. 🛀" },
+            { type: "motivation", message: "Believe in yourself! You're capable of amazing things! 🌈" },
+        ];
+
+        function showNotification() {
+            const randomNotification = notifications[Math.floor(Math.random() * notifications.length)];
+            document.getElementById("notificationMessage").textContent = randomNotification.message;
+            const panel = document.getElementById("notificationPanel");
+            panel.classList.add("show");
+            setTimeout(() => {
+                panel.classList.remove("show");
+            }, 5000);
+        }
+
+        function closeNotification() {
+            document.getElementById("notificationPanel").classList.remove("show");
+        }
+
+        window.onload = showNotification;
+    </script>
+</body>
+</html>

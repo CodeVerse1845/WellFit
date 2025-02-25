@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Notification</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Fullscreen overlay (hidden by default) */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 999;
+}
+
+/* Popup box */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+/* Close button */
+.close {
+    cursor: pointer;
+    font-size: 20px;
+    float: right;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Button to trigger popup -->
+    <button id="openPopup">Show Notification</button>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Popup container -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <p>This is a popup notification!</p>
+        </div>
+    </div>
+
+
+    <script>
+        // Get elements
+        const popup = document.getElementById("popup");
+        const overlay = document.getElementById("overlay");
+        const openPopup = document.getElementById("openPopup");
+        const closePopup = document.getElementById("closePopup");
+
+        // Show popup and overlay when button is clicked
+        openPopup.addEventListener("click", () => {
+            popup.style.display = "block";
+            overlay.style.display = "block";
+        });
+
+        // Hide popup and overlay when close button is clicked
+        closePopup.addEventListener("click", () => {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        });
+
+        // Hide popup when clicking outside it
+        overlay.addEventListener("click", () => {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color:#323643e2;
+    min-height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+    color: #333;
+    perspective: 800px;
+}
+
+.profile-container {
+    background: #fff;
+    padding: 30px; /* Reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1.2s ease-out;
+    width: 450px; /* Reduced width */
+    max-width: 90%;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+}
+
+.main-profile-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .profile-container:hover {
+    transform: rotateY(1deg) rotateX(2deg);
+} */
+
+h1 {
+    text-align: center;
+    color: #424242;
+    margin-bottom: 25px; /* Reduced margin */
+    font-size: 1.8em; /* Slightly smaller heading */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+form {
+    display: grid;
+    grid-gap: 15px; /* Reduced gap */
+    grid-template-columns: 1fr;
+}
+
+label {
+    color: #555;
+    font-weight: 500;
+    font-size: 0.95em; /* Slightly smaller label font */
+}
+
+input,
+select {
+    padding: 10px; /* Reduced padding */
+    border-radius: 5px; /* Reduced border radius */
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    background: #f9f9f9;
+    font-size: 0.95em; /* Slightly smaller input font */
+}
+
+input:focus,
+select:focus {
+    border-color: #5c6bc0;
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 107, 192, 0.3);
+    transform: scale(1.01);
+}
+
+button {
+    padding: 10px; /* Reduced padding */
+    border-radius: 5px; /* Reduced border radius */
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to right, #424242, #616161);
+    color: white;
+    font-weight: 500; /* Reduced font weight */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px; /* Reduced margin */
+    font-size: 0.95em; /*Slightly smaller font*/
+}
+
+button:hover {
+    /* background: linear-gradient(to right, #616161, #424242);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); */
+    background: grey;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1.2s ease-out;
+    margin-top: 30px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+}
+
+/* .profile-card:hover {
+    transform: rotateY(-2deg) rotateX(-1deg);
+} */
+
+.profile-card img {
+    border-radius: 50%;
+    width: 130px; /* Reduced image size */
+    height: 130px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     /* width: 50%; */
+    object-fit: cover;
+    margin-bottom: 15px; /* Reduced margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; 
+}
+
+.profile-card img:hover {
+    transform: scale(1.05);
+}
+
+.profile-info {
+    text-align: center;
+    font-size: 0.95em; /* Slightly smaller font */
+}
+
+#deleteProfile {
+    background: linear-gradient(to right, #d32f2f, #b71c1c);
+}
+
+#deleteProfile:hover {
+    background: linear-gradient(to right, #b71c1c, #d32f2f);
+}
+
+#addNewProfile {
+    margin-top: 20px; /* Reduced margin */
+    background: linear-gradient(to right, #388e3c, #1b5e20);
+}
+
+#addNewProfile:hover {
+    background: linear-gradient(to right, #1b5e20, #388e3c);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px); /* Reduced animation distance */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px); /* Reduced animation distance */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 25px; /* Further reduced padding on smaller screens */
+        width: 95%;
+    }
+    .profile-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .profile-container {
+        padding: 20px;
+    }
+    .profile-card {
+        padding: 20px;
+    }
+}

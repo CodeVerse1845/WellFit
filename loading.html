@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            /* background: linear-gradient(120deg, #7bc6cc, #be93c5); */
+            background-color: #323643;
+        }
+
+        .loading {
+            font-size: 84px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            text-align: center;
+            color: #93deff;
+        }
+
+        .loading span {
+            display: inline-block;
+            margin: 0 -0.05em;
+            animation: loading01 1.4s infinite alternate;
+        }
+
+        .loading span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .loading span:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .loading span:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .loading span:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .loading span:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .loading span:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .loading span:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes loading01 {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .hidden {
+            display: none;
+            /* Hides the element */
+        }
+
+        .loading {
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+            /* Optional to disable interactions */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loading Animation -->
+    <div class="loading" id="loading">
+        <span>W</span>
+        <span>E</span>
+        <span>L</span>
+        <span>L</span>
+        <span>F</span>
+        <span>I</span>
+        <span>T</span>
+    </div>
+
+
+    <!-- Main Content -->
+    <div id="content" class="hidden">
+        <h1>Welcome to the Homepage!</h1>
+        <p>This is your main content that will show after the loading animation disappears.</p>
+    </div>
+
+    <script>
+        // JavaScript to handle the loader
+        setTimeout(() => {
+            // Get the loading element and main content
+            const loadingElement = document.getElementById('loading');
+            const mainContent = document.getElementById('content');
+
+            // Hide the loader by adding 'hidden'
+            loadingElement.classList.add('hidden');
+
+            // Show the main content by removing 'hidden'
+            mainContent.classList.remove('hidden');
+        }, 3000); // 3 seconds
+    </script>
+</body>
+
+</html>
