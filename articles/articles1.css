@@ -1,0 +1,173 @@
+body {
+    background-color: #f1f6f8;
+    font-family: Inter, sans-serif;
+}
+
+section img {
+    height: 450px;
+    width: 100%;
+    object-fit: contain;
+    animation: fade-in 1s ease-in
+}
+
+.big-container1 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 300px;
+    margin-right: 300px;
+    animation: fade-in 1s ease-in
+}
+
+.big-container1 h1 {
+    color: #21273d;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-size: 48px;
+    font-weight: 700;
+    color: #21273d;
+    animation: fade-in 1s ease-in;
+}
+
+.big-container1 p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #21273db3;
+    line-height: 30px;
+    animation: fade-in 1s ease-in
+}
+
+.big-container1 h5 {
+    margin-top: 25px;
+    font-size: 2rem;
+    font-weight: bolder;
+    color:#080a10;
+    animation: fade-in 1s ease-in
+}
+
+.image1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 300px;
+    animation: fade-in 1s ease-in
+}
+
+svg {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    fill:#21273db3;
+    animation: fade-in 1s ease-in
+}
+
+.back-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.75rem;
+    font-weight: 100;
+    display: flex;
+    margin: 30px auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #21273db3;
+    animation: fade-in 1s ease-in;
+    cursor: pointer;
+}
+
+.big-container1 a {
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+    transition: 0.4s ease-in;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* Media queries */
+
+/* For screens with a maximum width of 1200px (e.g., laptops) */
+@media only screen and (max-width: 1200px) {
+    .big-container1 {
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+    .image1 {
+      height: 250px;
+    }
+  }
+  
+  /* For screens with a maximum width of 992px (e.g., tablets) */
+  @media only screen and (max-width: 992px) {
+    .big-container1 {
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+    .image1 {
+      height: 200px;
+    }
+    .big-container1 h1 {
+      font-size: 36px;
+    }
+    .big-container1 p {
+      font-size: 1.1rem;
+    }
+    .big-container1 h5 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* For screens with a maximum width of 768px (e.g., smaller tablets) */
+  @media only screen and (max-width: 768px) {
+    .big-container1 {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    .image1 {
+      height: 150px;
+    }
+    .big-container1 h1 {
+      font-size: 28px;
+    }
+    .big-container1 p {
+      font-size: 1rem;
+    }
+    .big-container1 h5 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* For screens with a maximum width of 480px (e.g., mobile phones) */
+  @media only screen and (max-width: 480px) {
+    .big-container1 {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    .image1 {
+      height: 100px;
+    }
+    .big-container1 h1 {
+      font-size: 20px;
+    }
+    .big-container1 p {
+      font-size: 0.9rem;
+    }
+    .big-container1 h5 {
+      font-size: 1rem;
+    }
+  }

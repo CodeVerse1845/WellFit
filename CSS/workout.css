@@ -1,0 +1,146 @@
+.container4{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #34495e; */
+    color: #e4f1fe;
+}
+
+.container4 img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    /* position: relative; */
+}
+.intro1{
+    position: absolute;
+}
+
+.bold-text{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.intro1 p{
+    text-align: center;
+    margin-top: 20px;
+}
+.text{
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.container3 {
+    padding-top: 20px;
+    background-color: #606470;
+    padding-bottom: 15px;
+}
+
+.container3 img {
+    height: 200px;
+    width: 400px;
+    object-fit: fill;
+    border-radius: 15px;
+    /* margin-bottom: 100px; */
+
+    &:hover {
+        transition: 0.4s all;
+        box-shadow: 0px 0px 25px lightgray;
+        transform: scale(1.09);
+    }
+}
+
+.sub img {
+    display: grid;
+    margin-left: 30px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    justify-content: start;
+    gap: 30px;
+
+}
+
+.partion1 {
+    height: 1px;
+    width: 100%;
+    background-color: lightgray;
+    /* width: 100%; */
+}
+
+.sub {
+    color: #f7f7f7;
+    text-decoration: none;
+}
+
+.sub-categories {
+    display: flex;
+    column-gap: 150px;
+}
+
+.intro {
+    display: block;
+    justify-items: center;
+    place-content: center;
+}
+
+.intro h1{
+    margin-bottom: 20px;
+}
+.intro span{
+    font-size: 1.25rem;
+    font-weight: 100;
+    color:lightgray;
+}
+
+
+/* make the layout responsive */
+
+/* media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+    .sub {
+        flex-basis: 33.33%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 500px;
+    }
+    .sub {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        max-width: 300px;
+    }
+    .sub {
+        flex-basis: 100%;
+    }
+}
+
+  .flicker {
+    margin: 1rem auto;
+    color: #fffefe61;
+    background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
+    background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
+    background-size: 110px 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: flick 1.5s infinite;
+  }
+  @keyframes flick {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  

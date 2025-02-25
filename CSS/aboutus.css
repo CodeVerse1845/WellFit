@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.partition {
+    width: 100;
+    border: 1px solid grey;
+}
+
+.top_content {
+    height: 60vh;
+    background: url('/assets/top-view-fitness-equipment-black-leather-background-with-copy-space_269655-83821.avif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 4rem;
+        font-weight: 600;
+        color:#f6f4f3
+        ;
+    }
+}
+.mainpage {
+    background: #606470;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f7f7f7;
+    .heading {
+        font-weight: 600;
+        font-size: 30px;
+        margin: 12px;
+        padding: 12px;
+    }
+    .card_01 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        margin: 20px;
+        gap: 25px;
+        width: 80vw;
+        .right_01 {
+            width: 50vw;
+            p {
+                margin: 5px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.suggestion {
+    height: 90vh;
+    background-color: #606470;
+    h1 {
+        color: #f7f7f7;
+        font-size: 30px;
+        margin: 20px;
+        padding: 20px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input,
+        textarea {
+            background: #f7f7f7;
+            margin: 12px;
+            padding: 12px;
+            font-size: 20px;
+            width: 40vw;
+            outline: none;
+            border: 1px solid rgb(134, 132, 132);
+            border-radius: 12px;
+        }
+        textarea {
+            height: 30vh;
+        }
+        .submit_btn {
+            /* border: 2px solid #f7f7f7; */
+            border: none;
+            color: #323643;
+            border-radius: 12px;
+            padding: 12px;
+            background-color: #f7f7f7;
+            transition: ease-in-out 0.3s;
+            &:hover {
+                color: #f7f7f7;
+                background-color:#323643;
+                cursor: pointer;
+            }
+        }
+    }
+}

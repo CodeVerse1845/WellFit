@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    /* margin: 0; */
+    /* padding: 20px; */
+    /* background-color: #f4f4f4; */
+}
+.notification-panel {
+    z-index: 1;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 320px;
+    color: black;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.notification-panel.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #93deff;
+    background: #323643;
+}
+.notification-content {
+    padding: 15px;
+}
+.close-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color:white;
+    font-size: 16px;
+}
